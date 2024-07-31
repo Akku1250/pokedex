@@ -1,0 +1,31 @@
+module.exports = {
+  root: true,
+  env: { browser: true, es2020: true },
+  extends: [
+    'airbnb',
+    'airbnb/hooks',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:@tanstack/eslint-plugin-query/recommended'
+    'prettier',
+  ],
+  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['react-refresh', '@tanstack/query'],
+  rules: {
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    'import/no-extraneous-dependencies': 'off',
+    'import/prefer-default-export': 'off',
+    'react/require-default-props': 'off',
+    'react/jsx-props-no-spreading': 'off',
+    'react/jsx-curly-brace-presence': 'off',
+    '@tanstack/query/exhaustive-deps': 'error',
+    '@typescript-eslint/array-type': 'error',
+    'one-var': 'error',
+    'no-multi-assign': 'error',
+    'no-mixed-operators': 'error',
+    'no-else-return': 'error',
+    'prefer-object-spread': 'warn',
+    'no-confusing-arrow': 'error',
+  },
+};
