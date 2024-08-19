@@ -4,6 +4,7 @@ import viteReact from '@vitejs/plugin-react';
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite';
 
 export default defineConfig({
+  base: '/pokedex/',
   plugins: [TanStackRouterVite(), viteReact()],
   resolve: {
     alias: {
