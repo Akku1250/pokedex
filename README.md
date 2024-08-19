@@ -1,30 +1,32 @@
-# React + TypeScript + Vite
+# Pokedex
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is inspired by the [Ricardo Schiniegoski Figma Design](https://www.figma.com/design/56C81JSVaxrEUpXVgGyy1h/Pok%C3%A9dex-(Community)?node-id=0-1&t=fVZ0KEhBWg8o6qaB-0). It served as a valuable learning experience for me, particularly in understanding the power and flexibility of TanStack Router and Query.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project aims to demonstrate how TanStack Router and Query can be used as lightweight alternatives to popular technologies like React Router, Next.js, and Redux. These tools offer greater flexibility and a streamlined developer experience, making them an excellent choice for modern web applications.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- TanStack Router: A powerful, flexible, and lightweight routing library that can replace more traditional solutions like React Router and Next.js. It also provides better type safety compared to Next.js, enhancing code reliability and maintainability.
+- TanStack Query: An advanced data fetching and state management solution, providing a robust alternative to Redux.
 
-- Configure the top-level `parserOptions` property like this:
+## Learning Outcomes
+Working on this project helped me gain a deeper understanding of:
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+- How to implement routing with TanStack Router.
+- Managing server-state and caching with TanStack Query.
+- Building flexible and efficient web applications without relying on heavier frameworks or libraries.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## API
+
+- [Pokemon API](https://pokeapi.co/)
+
+## Tech Stack
+
+- React
+- Tanstack Router
+- Tanstack Query
+- Tailwind CSS
+- Shadcn
+
