@@ -22,6 +22,10 @@ Working on this project helped me gain a deeper understanding of:
 
 - [Pokemon API](https://pokeapi.co/)
 
+## Project URL
+
+- [Pokedex App](https://akku1250.github.io/pokedex?sortBy=Number)
+
 ## Tech Stack
 
 - React
