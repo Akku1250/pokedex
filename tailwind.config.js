@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+
+const colors = require('tailwindcss/colors');
 module.exports = {
   darkMode: ['class'],
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
@@ -12,12 +14,12 @@ module.exports = {
       },
     },
     extend: {
-      fontSize: {
-        xxs: ['10px', '16px'],
-        caption: ['8px', '12px'],
-      },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+      },
+      gridTemplateRows: {
+        'pokedex-layout': '105px 1fr',
+        'pokemon-layout': '250px 1fr',
       },
       colors: {
         border: 'hsl(var(--border))',

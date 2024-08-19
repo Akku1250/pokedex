@@ -22,18 +22,6 @@ export const Route = createRootRouteWithContext<TRouteContext>()({
 function RootComponent() {
   return (
     <>
-      <div className="flex gap-2 p-2 text-lg">
-        <Link
-          to="/"
-          activeProps={{
-            className: 'font-bold',
-          }}
-          activeOptions={{ exact: true }}
-        >
-          Home
-        </Link>
-      </div>
-      <hr />
       <Outlet />
       <ReactQueryDevtools
         buttonPosition="bottom-left"

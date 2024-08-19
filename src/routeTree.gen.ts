@@ -11,12 +11,24 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
+import { Route as PokedexImport } from './routes/pokedex'
 import { Route as IndexImport } from './routes/index'
+import { Route as PokedexValueRouteImport } from './routes/pokedex_/$value/route'
 
 // Create/Update Routes
 
+const PokedexRoute = PokedexImport.update({
+  path: '/pokedex',
+  getParentRoute: () => rootRoute,
+} as any)
+
 const IndexRoute = IndexImport.update({
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const PokedexValueRouteRoute = PokedexValueRouteImport.update({
+  path: '/pokedex/$value',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -31,12 +43,30 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
+    '/pokedex': {
+      id: '/pokedex'
+      path: '/pokedex'
+      fullPath: '/pokedex'
+      preLoaderRoute: typeof PokedexImport
+      parentRoute: typeof rootRoute
+    }
+    '/pokedex/$value': {
+      id: '/pokedex/$value'
+      path: '/pokedex/$value'
+      fullPath: '/pokedex/$value'
+      preLoaderRoute: typeof PokedexValueRouteImport
+      parentRoute: typeof rootRoute
+    }
   }
 }
 
 // Create and export the route tree
 
-export const routeTree = rootRoute.addChildren({ IndexRoute })
+export const routeTree = rootRoute.addChildren({
+  IndexRoute,
+  PokedexRoute,
+  PokedexValueRouteRoute,
+})
 
 /* prettier-ignore-end */
 
@@ -46,11 +76,19 @@ export const routeTree = rootRoute.addChildren({ IndexRoute })
     "__root__": {
       "filePath": "__root.tsx",
       "children": [
-        "/"
+        "/",
+        "/pokedex",
+        "/pokedex/$value"
       ]
     },
     "/": {
       "filePath": "index.tsx"
+    },
+    "/pokedex": {
+      "filePath": "pokedex.tsx"
+    },
+    "/pokedex/$value": {
+      "filePath": "pokedex_/$value/route.tsx"
     }
   }
 }
